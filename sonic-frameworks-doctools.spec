@@ -72,7 +72,6 @@ Create documentation from DocBook
 
 %install -a
 %find_lang %{name} --all-name --with-qt --with-html --with-man
-rm -rf %{buildroot}/%{_libdir}/cmake
 
 %files -f %{name}.lang
 %{_bindir}/checkXML6
@@ -85,9 +84,7 @@ rm -rf %{buildroot}/%{_libdir}/cmake
 
 %files -n %{devname}
 %{_includedir}/KF6/KDocTools
-
-# pending rename
-# %{_libdir}/cmake/KF6DocTools
+%{_libdir}/cmake/KF6DocTools
 
 %files -n %{libname}
 %{_libdir}/libKF6DocTools.so*
